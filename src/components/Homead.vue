@@ -22,22 +22,42 @@
               background-color="#545c64"
               text-color="#fff"
               active-text-color="#ffd04b">
-              <el-menu-item index="1" @click="goTo('/add')">
-                <i class="el-icon-plus"></i>
-                <span slot="title">增加</span>
-              </el-menu-item>
-              <el-menu-item index="2"@click="goTo('/dele')">
-                <i class="el-icon-minus"></i>
-                <span slot="title">删除</span>
-              </el-menu-item>
-              <el-menu-item index="3" @click="goTo('/searchad')">
-                <i class="el-icon-search"></i>
-                <span slot="title">查询</span>
-              </el-menu-item>
-              <el-menu-item index="4"@click="goTo('/update')">
-                <i class="el-icon-lollipop"></i>
-                <span slot="title">修改</span>
-              </el-menu-item>
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>项目概况</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1" @click="goTo('/add2')">增加</el-menu-item>
+              <el-menu-item index="1-2" @click="goTo('/dele2')">删除</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchad2')">查询</el-menu-item>
+              <el-menu-item index="1-4" @click="goTo('/update2')">修改</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>场址概况</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1" @click="goTo('/add2')">增加</el-menu-item>
+              <el-menu-item index="1-2" @click="goTo('/dele2')">删除</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchad2')">查询</el-menu-item>
+              <el-menu-item index="1-4" @click="goTo('/update2')">修改</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="3">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>主要气象特征要素</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1" @click="goTo('/add2')">增加</el-menu-item>
+              <el-menu-item index="1-2" @click="goTo('/dele2')">删除</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchad2')">查询</el-menu-item>
+              <el-menu-item index="1-4" @click="goTo('/update2')">修改</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
             </el-menu>
 			
       </el-aside>

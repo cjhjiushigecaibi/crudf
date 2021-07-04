@@ -22,22 +22,43 @@
               background-color="#545c64"
               text-color="#fff"
               active-text-color="#ffd04b">
-              <el-menu-item index="1" disabled>
-                <i class="el-icon-plus"></i>
-                <span slot="title">增加</span>
-              </el-menu-item>
-              <el-menu-item index="2"disabled>
-                <i class="el-icon-minus"></i>
-                <span slot="title">删除</span>
-              </el-menu-item>
-              <el-menu-item index="3" @click="goTo('/searchuser')">
-                <i class="el-icon-document"></i>
-                <span slot="title">查询</span>
-              </el-menu-item>
-              <el-menu-item index="4"disabled>
-                <i class="el-icon-setting"></i>
-                <span slot="title">修改</span>
-              </el-menu-item>
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>项目概况</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1" disabled>增加</el-menu-item>
+              <el-menu-item index="1-2" disabled>删除</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchuser2')">查询</el-menu-item>
+              <el-menu-item index="1-4" disabled>修改</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>场址概况</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1" disabled>增加</el-menu-item>
+              <el-menu-item index="1-2" disabled>删除</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchuser2')">查询</el-menu-item>
+              <el-menu-item index="1-4" disabled>修改</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="3">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>主要气象特征要素</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1" disabled>增加</el-menu-item>
+              <el-menu-item index="1-2" disabled>删除</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchuser2')">查询</el-menu-item>
+              <el-menu-item index="1-4" disabled>修改</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+
             </el-menu>
 			
       </el-aside>

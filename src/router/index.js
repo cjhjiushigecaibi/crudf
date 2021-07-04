@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../components/Login.vue'//引入login组件
-import Homead from '../components/Homead.vue'//导入homead组件
-import Homeuser from '../components/Homeuser.vue'//导入homeuser组件
-import add from '../components/add.vue'//导入add组件
-import dele from '../components/dele.vue'//导入delete组件
-import searchad from '../components/searchad.vue'//导入search组件
-import searchuser from '../components/searchuser.vue'//导入search组件
-import update from '../components/update.vue'//导入update组件
+import Login from '../components/Login.vue'
+import Homead from '../components/Homead.vue'
+import Homeuser from '../components/Homeuser.vue'
+import add2 from '../components/table2/add2.vue'
+import dele2 from '../components/table2/dele2.vue'
+import searchad2 from '../components/table2/searchad2.vue'
+import searchuser2 from '../components/table2/searchuser2.vue'
+import update2 from '../components/table2/update2.vue'
 
 Vue.use(VueRouter)
 
@@ -25,29 +25,29 @@ const routes = [
 	  component: Homead,
 	  children: [
 		  {
-	      path: '/add',
-	      component: add,
+	      path: '/add2',
+	      component: add2,
 			},
 	  	  {
-		  path: '/dele',
-	  	  component: dele,
+		  path: '/dele2',
+	  	  component: dele2,
 	  		},
 			
 			{
-			path: '/update',
-			component: update,
+			path: '/update2',
+			component: update2,
 			},
 			{
-			path: '/searchad',
-			component: searchad,
+			path: '/searchad2',
+			component: searchad2,
 			},]
 	},
 	{
 	  path: '/home0',
 	  component: Homeuser,
 	  children: [{
-	      path: '/searchuser',
-	      component: searchuser,
+	      path: '/searchuser2',
+	      component: searchuser2,
 		  }]  
 	},
 ]
