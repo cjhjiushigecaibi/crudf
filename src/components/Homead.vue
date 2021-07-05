@@ -28,10 +28,10 @@
               <span>项目概况</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="1-1" @click="goTo('/add2')">增加</el-menu-item>
-              <el-menu-item index="1-2" @click="goTo('/dele2')">删除</el-menu-item>
-              <el-menu-item index="1-3" @click="goTo('/searchad2')">查询</el-menu-item>
-              <el-menu-item index="1-4" @click="goTo('/update2')">修改</el-menu-item>
+              <el-menu-item index="1-1" @click="goTo('/add0')">增加</el-menu-item>
+              <el-menu-item index="1-2" @click="goTo('/dele0')">删除</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchad0')">查询</el-menu-item>
+              <el-menu-item index="1-4" @click="goTo('/update0')">修改</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="2">
@@ -40,10 +40,10 @@
               <span>场址概况</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="1-1" @click="goTo('/add2')">增加</el-menu-item>
-              <el-menu-item index="1-2" @click="goTo('/dele2')">删除</el-menu-item>
-              <el-menu-item index="1-3" @click="goTo('/searchad2')">查询</el-menu-item>
-              <el-menu-item index="1-4" @click="goTo('/update2')">修改</el-menu-item>
+              <el-menu-item index="1-1" @click="goTo('/add1')">增加</el-menu-item>
+              <el-menu-item index="1-2" @click="goTo('/dele1')">删除</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchad1')">查询</el-menu-item>
+              <el-menu-item index="1-4" @click="goTo('/update1')">修改</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3">

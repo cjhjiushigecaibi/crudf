@@ -8,7 +8,7 @@
       <el-button type="primary" @click="">提交</el-button>
     </el-form-item>
     </el-form>
-	<h2>结果如下</h2>
+	<h2>主要气象特征要素结果如下</h2>
 	<router-view></router-view><!--结果展示-->
 	</div>
 	

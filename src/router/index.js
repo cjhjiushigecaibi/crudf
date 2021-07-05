@@ -3,6 +3,16 @@ import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Homead from '../components/Homead.vue'
 import Homeuser from '../components/Homeuser.vue'
+import add0 from '../components/table0/add0.vue'
+import dele0 from '../components/table0/dele0.vue'
+import searchad0 from '../components/table0/searchad0.vue'
+import searchuser0 from '../components/table0/searchuser0.vue'
+import update0 from '../components/table0/update0.vue'
+import add1 from '../components/table1/add1.vue'
+import dele1 from '../components/table1/dele1.vue'
+import searchad1 from '../components/table1/searchad1.vue'
+import searchuser1 from '../components/table1/searchuser1.vue'
+import update1 from '../components/table1/update1.vue'
 import add2 from '../components/table2/add2.vue'
 import dele2 from '../components/table2/dele2.vue'
 import searchad2 from '../components/table2/searchad2.vue'
@@ -40,15 +50,62 @@ const routes = [
 			{
 			path: '/searchad2',
 			component: searchad2,
-			},]
+			},
+		  {
+			  path: '/add0',
+			  component: add0,
+		  },
+		  {
+			  path: '/dele0',
+			  component: dele0,
+		  },
+
+		  {
+			  path: '/update0',
+			  component: update0,
+		  },
+		  {
+			  path: '/searchad0',
+			  component: searchad0,
+		  },
+		  {
+			  path: '/add1',
+			  component: add1,
+		  },
+		  {
+			  path: '/dele1',
+			  component: dele1,
+		  },
+
+		  {
+			  path: '/update1',
+			  component: update1,
+		  },
+		  {
+			  path: '/searchad1',
+			  component: searchad1,
+		  },
+
+	  ]
 	},
 	{
 	  path: '/home0',
 	  component: Homeuser,
-	  children: [{
+	  children: [
+	  	{
 	      path: '/searchuser2',
 	      component: searchuser2,
-		  }]  
+		  },
+		  {
+			  path: '/searchuser1',
+			  component: searchuser1,
+		  },
+		  {
+			  path: '/searchuser0',
+			  component: searchuser0,
+		  },
+
+	  ]
 	},
 ]
 

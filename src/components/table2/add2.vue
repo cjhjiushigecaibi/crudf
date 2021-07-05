@@ -31,7 +31,7 @@
 									<el-form-item prop="Filthy_Level">
 									  <el-input v-model="loginForm.Filthy_Level" placeholder="请输入污秽等级" ></el-input>
 									</el-form-item>
-							<el-form-item class="btns">
+							<el-form-item >
 					  <el-button type="primary" @click="">提交</el-button>
 					</el-form-item>
 		</el-form>
@@ -44,22 +44,22 @@
 	  data() {
 	    return {
 	      loginForm: {
-			locPV:"",
-	        AVG_Tem_year: "",
+			    locPV:"",
+          AVG_Tem_year: "",
 	        MAX_Tem_year: "",
-			Min_Tem_year: "",
-			AVG_Tem_Hotmonth:"",
-			MAX_Soil_Depth:"",
-			AVG_Windspeed_year:"",
-			MAX_Windspeed_year:"",
-			AVG_Thunderstormday_year:"",
-			Filthy_Level:"",
+			    Min_Tem_year: "",
+			    AVG_Tem_Hotmonth:"",
+          MAX_Soil_Depth:"",
+          AVG_Windspeed_year:"",
+          MAX_Windspeed_year:"",
+          AVG_Thunderstormday_year:"",
+          Filthy_Level:"",
 	      },
 		}
 	}
 }
 		  methods:{
-			   //login(){},
+			   //submit(){},
 		  }
 </script>
 

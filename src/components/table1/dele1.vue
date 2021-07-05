@@ -1,5 +1,5 @@
 <template>
-	<h1>update2</h1>
+  <h1>delete1</h1>
 </template>
 
 <script>
