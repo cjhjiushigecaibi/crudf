@@ -1,8 +1,8 @@
 <template>
   <div class="box">
     <el-form>
-      <el-form-item prop="pname">
-        <el-input v-model="pname" placeholder="请输入名称查询"></el-input>
+      <el-form-item prop="projectName">
+        <el-input v-model="projectName" placeholder="请输入名称查询"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" icon="el-icon-serch" @click="getProjectListByname">提交</el-button>
@@ -12,13 +12,13 @@
     <!--用户列表  -->
     <el-table :data="[projectlistbyname]" width="3000" border stripe>
       <el-table-column type="index"></el-table-column>
-      <el-table-column label="项目名称" prop="pname"></el-table-column>
-      <el-table-column label="项目类型" prop="ptype"></el-table-column>
-      <el-table-column label="项目阶段" prop="pstage"></el-table-column>
-      <el-table-column label="项目业主" prop="powner"></el-table-column>
-      <el-table-column label="项目业主所属集团" prop="pgroup"></el-table-column>
-      <el-table-column label="设计单位" prop="pdesigninstitute"></el-table-column>
-      <el-table-column label="日期" prop="pdate"></el-table-column>
+      <el-table-column label="项目名称" prop="projectName"></el-table-column>
+      <el-table-column label="项目类型" prop="projectType"></el-table-column>
+      <el-table-column label="项目阶段" prop="projectStage"></el-table-column>
+      <el-table-column label="项目业主" prop="projectOwner"></el-table-column>
+      <el-table-column label="项目业主所属集团" prop="projectGroup"></el-table-column>
+      <el-table-column label="设计单位" prop="projectDesignInstitute"></el-table-column>
+      <el-table-column label="日期" prop="projectDate"></el-table-column>
     </el-table>
 
   </div>
@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      pname: "",
+      projectName: "",
       projectlist: [],
       projectlistbyname: [],
     }
@@ -45,7 +45,7 @@ export default {
     },
     //根据名字查询
     async getProjectListByname() {
-      const {data: res} = await this.$http.get("project/getProjectByName/" + this.pname).then(response => {
+      const {data: res} = await this.$http.get("project/getProjectByName/" + this.projectName).then(response => {
         console.log("success")
         this.projectlistbyname = response.data;
       })

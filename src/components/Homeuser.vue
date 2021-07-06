@@ -30,7 +30,7 @@
             <el-menu-item-group>
               <el-menu-item index="1-1" disabled>增加</el-menu-item>
               <el-menu-item index="1-2" disabled>删除</el-menu-item>
-              <el-menu-item index="1-3" @click="goTo('/searchuser2')">查询</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchuser0')">查询</el-menu-item>
               <el-menu-item index="1-4" disabled>修改</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -42,7 +42,7 @@
             <el-menu-item-group>
               <el-menu-item index="1-1" disabled>增加</el-menu-item>
               <el-menu-item index="1-2" disabled>删除</el-menu-item>
-              <el-menu-item index="1-3" @click="goTo('/searchuser2')">查询</el-menu-item>
+              <el-menu-item index="1-3" @click="goTo('/searchuser1')">查询</el-menu-item>
               <el-menu-item index="1-4" disabled>修改</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
