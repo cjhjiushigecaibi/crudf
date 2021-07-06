@@ -1,31 +1,62 @@
 <template>
   <div class="box">
     <el-form>
-      <el-form-item prop="sear">
-        <el-input v-model="input" placeholder="请输入名称查询"></el-input>
+      <el-form-item prop="pname">
+        <el-input v-model="pname" placeholder="请输入名称查询"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="">提交</el-button>
+        <el-button type="primary" icon="el-icon-serch" @click="getProjectListByname">提交</el-button>
       </el-form-item>
     </el-form>
-    <h2>查询项目概况结果如下</h2>
-    <router-view></router-view><!--结果展示-->
+    <h2>查询结果</h2>
+    <!--用户列表  -->
+    <el-table :data="[projectlistbyname]" width="3000" border stripe>
+      <el-table-column type="index"></el-table-column>
+      <el-table-column label="项目名称" prop="pname"></el-table-column>
+      <el-table-column label="项目类型" prop="ptype"></el-table-column>
+      <el-table-column label="项目阶段" prop="pstage"></el-table-column>
+      <el-table-column label="项目业主" prop="powner"></el-table-column>
+      <el-table-column label="项目业主所属集团" prop="pgroup"></el-table-column>
+      <el-table-column label="设计单位" prop="pdesigninstitute"></el-table-column>
+      <el-table-column label="日期" prop="pdate"></el-table-column>
+    </el-table>
+
   </div>
 
 </template>
 
 <script>
 export default {
+  created() {
+    this.getProjectList();
+  },
   data() {
     return {
-      input: ''
+      pname: "",
+      projectlist: [],
+      projectlistbyname: [],
     }
-  }
+  },
+  methods: {
+    //获得所有光伏信息
+    async getProjectList() {
+      const {data: res} = await this.$http.get("project/getAll");
+      this.projectlist = res;
+    },
+    //根据名字查询
+    async getProjectListByname() {
+      const {data: res} = await this.$http.get("project/getProjectByName/" + this.pname).then(response => {
+        console.log("success")
+        this.projectlistbyname = response.data;
+      })
+
+    },
+  },
 }
 </script>
 
 <style>
-.box{
+.box {
   width: 250px;
   height: 300px;
   padding-top: 20px;
